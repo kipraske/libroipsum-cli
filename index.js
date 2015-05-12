@@ -1,20 +1,27 @@
 var LibroIpsum = require('libroipsum');
 var argv = require('yargs')
-		.usage('Usage: $0 <sourcetext> [options]')
-		.demand(1)
-		.options('w', {
+		.usage('Usage: $0 [options]')
+		.options('f', {
 			demand : true,
+			alias : 'file',
+			nargs : 1,
+			describe : 'Plaintext file from which phrases are to be generated.'
+		})
+		.options('w', {
+			demand : false,
 			alias : 'words',
 			nargs : 1,
-			describe : 'Number of words to be generated'
+			describe : 'Number of words to be generated',
+			default : 25
 		})
 		.options('k', {
 			demand: false,
 			alias: 'key-length',
 			nargs: 1,
-			describe: 'Length of key (integer), where larger number will create phrase more similar to original text (optional, defaults to 6)'
+			describe: 'Length of key (integer), where larger number will create phrase more similar to original text',
+			default : 6
 		})
 		.argv;
 
-var returnText = new LibroIpsum("Source text goes here eventually").generate(argv.w, argv.k);
+var returnText = new LibroIpsum("Some text goes here you know").generate(argv.w, argv.k);
 console.log(returnText);
