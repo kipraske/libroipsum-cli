@@ -1,7 +1,7 @@
 var fs = require('fs');
 var LibroIpsum = require('libroipsum');
 var argv = require('yargs')
-		.usage('Usage: $0 [options]')
+		.usage('Usage: node index.js [options]')
 		.options('f', {
 			demand : true,
 			alias : 'file',
