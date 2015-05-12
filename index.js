@@ -1,3 +1,4 @@
+var fs = require('fs');
 var LibroIpsum = require('libroipsum');
 var argv = require('yargs')
 		.usage('Usage: $0 [options]')
@@ -23,5 +24,6 @@ var argv = require('yargs')
 		})
 		.argv;
 
-var returnText = new LibroIpsum("Some text goes here you know").generate(argv.w, argv.k);
+var sourceText = fs.readFileSync(argv.f, {encoding : 'utf8'});
+var returnText = new LibroIpsum(sourceText).generate(argv.w, argv.k);
 console.log(returnText);
