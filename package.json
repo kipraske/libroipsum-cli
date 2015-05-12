@@ -1,0 +1,21 @@
+{
+	"name": "libroipsum-cli",
+	"version": "1.0.0",
+	"description": "A command line wrapper for Andrew Duthie's LibroIpsum sample placeholder text tool",
+	"main": "index.js",
+	"scripts": {},
+	"keywords": [
+		"lorem",
+		"ipsum",
+		"libro"
+	],
+	"author": "Kristofer Raske",
+	"license": "GPL",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kipraske/libroipsum-cli"
+	},
+	"dependencies": {
+		"libroipsum": "^0.1.3"
+	}
+}
