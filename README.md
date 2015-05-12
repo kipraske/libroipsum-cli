@@ -5,7 +5,7 @@ A command line wrapper for Andrew Duthie's [LibroIpsum](https://github.com/aduth
 
 `node index.js [options]` where options include
 
-* -f, --file        Plaintext file from which phrases are to be generated. (required)
-* -w, --words       Number of words to be generated (default: 25)
-* -k, --key-length  Length of key (integer), where larger number will create 
-                    phrase more similar to original text (default: 6)
+* `-f, --file`        Plaintext file from which phrases are to be generated. (required)
+* `-w, --words`       Number of words to be generated (default: 25)
+* `-k, --key-length`  Length of key (integer), where larger number will create
+                      phrase more similar to original text (default: 6)
